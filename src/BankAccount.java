@@ -3,11 +3,8 @@ public class BankAccount
     String accountHolder;
     int accountNumber;
     double balance;
-    double depositValue;
-    double withdrawValue;
     double[] arr = new double[3];
     int transactionCount = 0;
-    double transactionBalance;
     double[] balanceArr = new double[3];
 
 
@@ -28,9 +25,9 @@ public class BankAccount
     {
         if(amount>0)
         {
-            depositValue = amount;
+            double depositValue = amount;
             balance += amount;
-            transactionBalance = balance;
+            double transactionBalance = balance;
             transactions(depositValue,transactionBalance);
             System.out.println("Deposit successfully");
             System.out.println("Current Balance: "+balance);
@@ -45,9 +42,9 @@ public class BankAccount
     {
         if(amount > 0 && balance>=amount)
         {
-            withdrawValue = -amount;
+            double withdrawValue = -amount;
             balance -= amount;
-            transactionBalance = balance;
+            double transactionBalance = balance;
             transactions(withdrawValue,transactionBalance);
             System.out.println("Withdraw Successfully");
             System.out.println("Current Balance: "+balance);
