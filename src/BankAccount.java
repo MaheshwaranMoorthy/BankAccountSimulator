@@ -1,11 +1,11 @@
 public class BankAccount
 {
-    String accountHolder;
-    int accountNumber;
-    double balance;
-    double[] arr = new double[3];
-    int transactionCount = 0;
-    double[] balanceArr = new double[3];
+    private String accountHolder;
+    private int accountNumber;
+    private double balance;
+    private double[] arr = new double[3];
+    private int transactionCount = 0;
+    private double[] balanceArr = new double[3];
 
 
     public BankAccount(String name,int number,double balance)
@@ -13,6 +13,11 @@ public class BankAccount
         this.accountHolder = name;
         this.accountNumber = number;
         this.balance = balance;
+    }
+
+    public double getBalance()
+    {
+        return balance;
     }
     void displayAccountDetails()
     {

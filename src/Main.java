@@ -120,7 +120,7 @@ public class Main
                 case 3:
                     System.out.println("Enter amount: ");
                     double withdraw = 0.0;
-                    while(withdraw <= 0.0 || account1.balance<withdraw)
+                    while(withdraw <= 0.0 || account1.getBalance()<withdraw)
                     {
                         if(sc.hasNextDouble())
                         {
@@ -130,7 +130,7 @@ public class Main
                                 System.out.println("Please enter a valid withdraw amount: ");
                                 System.out.println("Enter amount: ");
                             }
-                            if(account1.balance<withdraw)
+                            if(account1.getBalance()<withdraw)
                             {
                                 System.out.println("Please enter a withdraw amount lesser than balance: ");
                                 System.out.println("enter amount: ");
@@ -147,7 +147,7 @@ public class Main
                     break;
 
                 case 4:
-                    System.out.println("Balance: "+account1.balance);
+                    System.out.println("Balance: "+account1.getBalance());
                     break;
 
                 case 5:
